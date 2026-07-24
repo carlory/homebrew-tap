@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check Ruby syntax
+        run: ruby -c Formula/tailport.rb
+      - name: Check Homebrew style
+        run: brew style Formula/tailport.rb
