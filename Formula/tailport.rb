@@ -1,26 +1,26 @@
 class Tailport < Formula
   desc "Automatically expose loopback TCP services over Tailscale"
   homepage "https://github.com/carlory/tailport"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/carlory/tailport/releases/download/v0.1.3/tailport_v0.1.3_Darwin_arm64.tar.gz"
-      sha256 "0e1a02a56b4c8f104d95b97a18d69999f2211785a9ccda3f58e6a6b8eb9039a4"
+      url "https://github.com/carlory/tailport/releases/download/v0.1.4/tailport_v0.1.4_Darwin_arm64.tar.gz"
+      sha256 "e9012bf1a4da23ac733f0c8a2cae0b3da60308f14495efd9dd09e94f732cffcc"
     else
-      url "https://github.com/carlory/tailport/releases/download/v0.1.3/tailport_v0.1.3_Darwin_x86_64.tar.gz"
-      sha256 "18fe6e5447126ef8cbb3301f8696e147dcfe713d4e265ca5d17e770e1f3aa743"
+      url "https://github.com/carlory/tailport/releases/download/v0.1.4/tailport_v0.1.4_Darwin_x86_64.tar.gz"
+      sha256 "2fb3d3af704004d8367a0ac5af454d3ad2498100f92a03d5ad3ca43822acc092"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/carlory/tailport/releases/download/v0.1.3/tailport_v0.1.3_Linux_arm64.tar.gz"
-      sha256 "06ffec07e82f35bcff32c15eb391d041f20969a548033c5bdf1f58841d29c922"
+      url "https://github.com/carlory/tailport/releases/download/v0.1.4/tailport_v0.1.4_Linux_arm64.tar.gz"
+      sha256 "93b3c83cc7bac9beeb9491e63e2bf2915e0cb968e907366fc3469426e6f6eb92"
     else
-      url "https://github.com/carlory/tailport/releases/download/v0.1.3/tailport_v0.1.3_Linux_x86_64.tar.gz"
-      sha256 "2297df771a740b3ff35902db8bcfa6ca4289511444bcf571aee753fd5ef97f46"
+      url "https://github.com/carlory/tailport/releases/download/v0.1.4/tailport_v0.1.4_Linux_x86_64.tar.gz"
+      sha256 "a2621827a5ea46a1a9f946845b8cd5b3fb994be559a8a7432afb087edbd50373"
     end
   end
 
