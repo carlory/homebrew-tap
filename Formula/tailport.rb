@@ -1,26 +1,26 @@
 class Tailport < Formula
   desc "Automatically expose loopback TCP services over Tailscale"
   homepage "https://github.com/carlory/tailport"
-  version "0.1.4"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/carlory/tailport/releases/download/v0.1.4/tailport_v0.1.4_Darwin_arm64.tar.gz"
-      sha256 "e9012bf1a4da23ac733f0c8a2cae0b3da60308f14495efd9dd09e94f732cffcc"
+      url "https://github.com/carlory/tailport/releases/download/v0.2.0/tailport_v0.2.0_Darwin_arm64.tar.gz"
+      sha256 "b98af2aca479125a9a08de7dc72d739b64704676d5efa024c3cc1d5af9d65b97"
     else
-      url "https://github.com/carlory/tailport/releases/download/v0.1.4/tailport_v0.1.4_Darwin_x86_64.tar.gz"
-      sha256 "2fb3d3af704004d8367a0ac5af454d3ad2498100f92a03d5ad3ca43822acc092"
+      url "https://github.com/carlory/tailport/releases/download/v0.2.0/tailport_v0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "8948903911514a534bd7d6d89c7ea1284ceed9ac15e21e694e34412b8f5c0f0e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/carlory/tailport/releases/download/v0.1.4/tailport_v0.1.4_Linux_arm64.tar.gz"
-      sha256 "93b3c83cc7bac9beeb9491e63e2bf2915e0cb968e907366fc3469426e6f6eb92"
+      url "https://github.com/carlory/tailport/releases/download/v0.2.0/tailport_v0.2.0_Linux_arm64.tar.gz"
+      sha256 "c6122dd571d7db9f376b7a99f2c4baef84d8ec0b5d081bccdcc821324f42ebc5"
     else
-      url "https://github.com/carlory/tailport/releases/download/v0.1.4/tailport_v0.1.4_Linux_x86_64.tar.gz"
-      sha256 "a2621827a5ea46a1a9f946845b8cd5b3fb994be559a8a7432afb087edbd50373"
+      url "https://github.com/carlory/tailport/releases/download/v0.2.0/tailport_v0.2.0_Linux_x86_64.tar.gz"
+      sha256 "1050d68db9f7250d0c2b5c12e3deebfb851e132fcc47ee13c3ee0a63969eb4b9"
     end
   end
 
@@ -38,6 +38,6 @@ class Tailport < Formula
 
   test do
     assert_match "tailport v#{version}", shell_output("#{bin}/tailport version")
-    assert_match "configuration is valid", shell_output("#{bin}/tailport config validate")
+    assert_match "Configuration is valid", shell_output("#{bin}/tailport config validate")
   end
 end
